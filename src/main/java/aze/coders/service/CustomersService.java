@@ -9,6 +9,11 @@ public interface CustomersService {
    Customers findByCustomerId(Integer customerId);
    List<Customers> customersList();
    void insert(Customers customers);
+   void insertPrepare(Customers customers);
    Customers update(Integer customerId, String columnName, String columnValue);
+   void deleteByCustomerId(Integer customerId);
+   String getCustomersName(Integer customerId);
+   String getCustomersNameProc(Integer customerId);
+   void insertBatch(List<Customers> customersList);
 
 }
